@@ -30,24 +30,16 @@ Apesar de já conhecer as tecnologias utilizadas, ainda tenho uma grande dificul
 
 # Como o projeto está até o momento
 
-Dei uma pequena avançada e fiz a primeira versão da página inicial, e o resultado pode ser conferido [aqui](https://nlw-2-proffy.netlify.app).
-
-
+O projeto foi hospedado no Netlify, para que o resultado possa ser visto, basta clicar [aqui](https://nlw-2-proffy.netlify.app).
 
 ## Dia 1
 
 Me adiantei um pouco e fiz o layout da tela inicial utilizando o grid e adicionei mais breakpoints para responsividade.
 
-
-
 ## Dia 2
 
 Alterei algumas coisas no layout anterior seguindo os passos que o Mayk Brito fez durante a aula, o que deixou o visual bem mais próximo do esperado.
 
-
-
 ## Dia 3
-
-
 
 Fiz o que foi realizado em aula e adicionalmente criei um botão para que o usuário possa  remover um campo de horário criado previamente por ele, visto que seu preenchimento é obrigatório e caso um campo a mais fosse adicionado sem querer, o usuário precisaria recarregar a página e preencher tudo novamente, agora basta remover o campo indesejado.
