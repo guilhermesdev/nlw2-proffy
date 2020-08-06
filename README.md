@@ -43,3 +43,11 @@ Alterei algumas coisas no layout anterior seguindo os passos que o Mayk Brito fe
 ## Dia 3
 
 Fiz o que foi realizado em aula e adicionalmente criei um botão para que o usuário possa  remover um campo de horário criado previamente por ele, visto que seu preenchimento é obrigatório e caso um campo a mais fosse adicionado sem querer, o usuário precisaria recarregar a página e preencher tudo novamente, agora basta remover o campo indesejado.
+
+
+
+## Dia 4
+
+Iniciamos a parte do back-end com o uso do Node em conjunto com Express e Nunjucks. Consegui ter uma boa noção do processo, embora ainda não esteja familiarizado com as ferramentas.
+
+Além disso, fizemos um pequena alteração nas pastas, visando uma melhor organização.
