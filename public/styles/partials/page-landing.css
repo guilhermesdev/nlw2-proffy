@@ -84,11 +84,11 @@ span.total-connections{
 	}
 }
 
-@media (min-width: 650px){
+/*@media (min-width: 650px){
 	:root{
 		font-size: 62.5%;
 	}
-}
+}*/
 
 @media (min-width: 650px) and (max-width: 1099px){
 	.logo-container{
