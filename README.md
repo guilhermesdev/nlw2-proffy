@@ -30,7 +30,7 @@ Apesar de já conhecer as tecnologias utilizadas, ainda tenho uma grande dificul
 
 # Como o projeto está até o momento
 
-O projeto foi hospedado no Netlify, para que o resultado possa ser visto, basta clicar [aqui](https://nlw-2-proffy.netlify.app).
+O projeto foi hospedado de maneira estática (sem conexão com servidor ou banco de dados) no Netlify. Para que o resultado possa ser visto, basta clicar [aqui](https://nlw-2-proffy.netlify.app).
 
 ## Dia 1
 
@@ -44,10 +44,18 @@ Alterei algumas coisas no layout anterior seguindo os passos que o Mayk Brito fe
 
 Fiz o que foi realizado em aula e adicionalmente criei um botão para que o usuário possa  remover um campo de horário criado previamente por ele, visto que seu preenchimento é obrigatório e caso um campo a mais fosse adicionado sem querer, o usuário precisaria recarregar a página e preencher tudo novamente, agora basta remover o campo indesejado.
 
-
-
 ## Dia 4
 
 Iniciamos a parte do back-end com o uso do Node em conjunto com Express e Nunjucks. Consegui ter uma boa noção do processo, embora ainda não esteja familiarizado com as ferramentas.
 
 Além disso, fizemos um pequena alteração nas pastas, visando uma melhor organização.
+
+
+
+## Dia 5
+
+
+
+O projeto foi finalizado com a adição e implementação do banco de dados e a lógica de redirecionamento e filtros para que o usuário possa encontrar os proffys quando realizar uma busca.
+
+Sem dúvidas esse foi o dia mais difícil e cansativo, pois na maior parte do tempo foram trabalhados conceitos com os quais não estava familiarizado, como toda a parte do banco de dados, metódos HTTP e outras implementações que uniam essas duas áreas. Mas no fim a aplicação está aí e pretendo concluir os desafios propostos.
