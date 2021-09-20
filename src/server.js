@@ -19,7 +19,7 @@ nunjucks.configure('src/views', {
 // Início e configuração do servidor
 server
 // receber os dados do req.body
-.use(express.urlencoded({ extended: true }))
+	.use(express.urlencoded({ extended: true }))
 // Configuração de arquivos estáticos
 	.use(express.static("public"))
 // Rotas da aplicação
