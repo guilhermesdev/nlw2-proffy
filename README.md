@@ -35,7 +35,7 @@ yarn install
 npm install
 ```
 
-E então execute o seguinte script para rodar em modo de de desenvolvimento:
+E então execute o seguinte script para rodar em modo de desenvolvimento:
 
 ```bash
 yarn dev
