@@ -9,7 +9,7 @@ const subjects = [
 	"Matemática",
 	"Português",
 	"Química",
-]
+];
 
 const weekdays = [
 	"Domingo",
@@ -19,7 +19,7 @@ const weekdays = [
 	"Quinta-feira",
 	"Sexta-feira",
 	"Sábado",
-]
+];
 
 // Funcionalidades
 
@@ -38,4 +38,4 @@ module.exports = {
 	weekdays,
 	getSubject,
 	convertHoursToMinutes
-}
+};
