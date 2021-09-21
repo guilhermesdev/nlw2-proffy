@@ -21,8 +21,8 @@ Este projeto foi desenvolvido dura a **[Next Level Week 2](https://nextlevelweek
 Clone o projeto e acesse sua respectiva pasta.
 
 ```bash
-git clone https://github.com/guilhermesdev/nlw2-proffy.git
-cd nlw2-proffy
+git clone https://github.com/guilhermesdev/proffy.git
+cd proffy
 ```
 
 Instale as dependências do projeto
