@@ -7,7 +7,7 @@
     "db:reset": "rm database.sqlite && yarn db:init"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nunjucks": "^3.2.2",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
