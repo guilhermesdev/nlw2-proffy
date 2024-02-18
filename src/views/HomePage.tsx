@@ -33,13 +33,14 @@ export function HomePage() {
 							</button>
 						</a>
 					</div>
-					<span class="total-connections">
+					{/* // TODO: implement this when possible   */}
+					{/* <span class="total-connections">
 						Total de 285 conexões já realizadas
 						<img
 							src="/public/images/icons/purple-heart.svg"
 							alt="Coração lilás"
 						/>
-					</span>
+					</span> */}
 				</div>
 			</body>
 		</Layout>
