@@ -1,5 +1,5 @@
 <p align="center">
-	<img alt="Logo do Proffy" src=".github/logo.svg" width="160px">
+	<img alt="Proffy" src=".github/logo.svg" width="160px">
 </p>
 
 # ![Proffy](.github/cover.png)
@@ -8,49 +8,36 @@
 
 Proffy é uma plataforma que busca conectar alunos e educadores independentes de maneira simples e direta.
 
-Este projeto foi desenvolvido dura a **[Next Level Week 2](https://nextlevelweek.com/)**, um evento de programaçao online e gratuito com duração de uma semana realizado pela **[Rocketseat](https://github.com/Rocketseat)**, sendo este repositório em específico baseado na versão desenvolvida na **trilha Discovery**, com as aulas sendo gravadas pelo **[Mayk Brito](https://github.com/maykbrito)**.
-
 ## Tecnologias utilizadas
 
-- [Express](https://expressjs.com/)
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Bun](https://bun.sh/) 
+- [Elysia](https://elysiajs.com/)
 - [SQLite](https://www.sqlite.org/index.html)
+- [Drizzle](https://orm.drizzle.team/)
 
 ## Executando o projeto
 
 Clone o projeto e acesse sua respectiva pasta.
 
-```bash
+```sh
 git clone https://github.com/guilhermesdev/proffy.git
 cd proffy
 ```
 
 Instale as dependências do projeto
 
-```bash
-yarn install
-
-# ou
-
-npm install
+```sh
+bun install
 ```
 
-E então execute o seguinte script para rodar em modo de desenvolvimento:
+Copie o conteúdo do arquivo `.env.example` para o arquivo `.env`
 
-```bash
-yarn dev
-
-# ou
-
-npm run dev
+```sh
+cp .env.example .env
 ```
 
-Ou o script a seguir caso queira rodar já em modo de produção:
+E então execute o seguinte comando para iniciar o banco de dados e rodar a aplicação em modo de desenvolvimento:
 
-```bash
-yarn start
-
-# ou
-
-npm run start
+```sh
+bun run db:migrate && bun run dev
 ```
