@@ -1,25 +1,24 @@
-const addTimeBtn = document.querySelector('#add-time');
-const scheduleItems = document.querySelector('#schedule-items');
-const scheduleItem = document.querySelector('.schedule-item');
+const $addTimeButton = document.querySelector('#add-time');
+const $scheduleCardsWrapper = document.querySelector('#schedule-cards');
+const $scheduleCardTemplate = document.getElementById('schedule-card-template');
 
-const addTimeRemover = parentElement => {
+function addTimeRemoverTo(parentElement) {
 	const timeRemover = document.createElement('span');
 
 	timeRemover.textContent = '- Remover';
-	timeRemover.onclick = () => timeRemover.parentNode.remove();
-
 	timeRemover.classList.add('time-remover');
+	timeRemover.addEventListener('click', () => timeRemover.parentNode.remove());
+
 	parentElement.appendChild(timeRemover);
 }
 
-const cloneField = () => {
-	const newFieldContainer = scheduleItem.cloneNode(true);
-	const fields = newFieldContainer.querySelectorAll('input');
+function addNewScheduleCard() {
+	const $scheduleCard =
+		$scheduleCardTemplate.content.firstChild.cloneNode(true);
 
-	fields.forEach(field => field.value = '');
-	addTimeRemover(newFieldContainer);
+	addTimeRemoverTo($scheduleCard);
 
-	scheduleItems.appendChild(newFieldContainer);
-};
+	$scheduleCardsWrapper.appendChild($scheduleCard);
+}
 
-addTimeBtn.addEventListener('click', cloneField);
+$addTimeButton.addEventListener('click', addNewScheduleCard);
