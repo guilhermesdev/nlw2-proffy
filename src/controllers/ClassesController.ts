@@ -9,9 +9,11 @@ import {
 } from '../repositories/ProffiesRepository';
 import {
 	ClassesRepository,
-	type Class
+	type Class,
+	type ClassScheduleValue
 } from '../repositories/ClassesRepository';
 import { WeekDay, type WeekdayValue } from '../entities/weekdays';
+import { brazilianPhoneRegex } from '../utils/text';
 
 function isValidHttpUrl(string: string) {
 	try {
@@ -49,13 +51,15 @@ export function ClassesController(app: Elysia): Elysia {
 
 			const classObject: Omit<Class, 'id'> = { subject, cost };
 
-			const classScheduleValues = weekdays.map((weekday, index) => {
-				return {
-					weekday,
-					startAt: Time.timeStringToMinutes(startTimeStrings[index]),
-					endAt: Time.timeStringToMinutes(endTimeStrings[index])
-				};
-			});
+			const classScheduleValues: ClassScheduleValue[] = weekdays.map(
+				(weekday, index) => {
+					return {
+						weekday,
+						startAt: Time.timeStringToMinutes(startTimeStrings[index]),
+						endAt: Time.timeStringToMinutes(endTimeStrings[index])
+					};
+				}
+			);
 
 			const { id: proffyId } = await ProffiesRepository.create(proffyValue);
 
@@ -103,8 +107,6 @@ type ParsedBodyParams = {
 	startTimeStrings: TimeString[];
 	endTimeStrings: TimeString[];
 };
-
-const brazilianPhoneRegex = /^[1-9]{2}[9]?([1-9]{4})([0-9]{4}$)/;
 
 function handleBodyParams({
 	bio,

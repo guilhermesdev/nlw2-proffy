@@ -6,3 +6,5 @@ export function capitalize(string: string) {
 
 	return `${firstLetter.toUpperCase()}${rest}`;
 }
+
+export const brazilianPhoneRegex = /^[1-9]{2}[9]?([1-9]{4})([0-9]{4}$)/;

@@ -26,13 +26,15 @@ type GetAllParams = {
 	time: number;
 };
 
+export type ClassScheduleValue = {
+	weekday: WeekdayValue;
+	startAt: number;
+	endAt: number;
+};
+
 type CreateParams = {
 	classObject: Omit<Class, 'id'>;
-	classScheduleValues: {
-		weekday: WeekdayValue;
-		startAt: number;
-		endAt: number;
-	}[];
+	classScheduleValues: ClassScheduleValue[];
 	proffyId: string;
 };
 

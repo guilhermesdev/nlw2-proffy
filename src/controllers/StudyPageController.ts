@@ -61,9 +61,11 @@ function getSubject(value: unknown): SubjectValue | undefined {
 }
 
 function getWeekday(value: unknown): WeekdayValue | undefined {
-	if (typeof value !== 'number') return undefined;
+	const weekday = Number(value);
 
-	return WeekDay.isValidWeekDay(value) ? value : undefined;
+	if (typeof weekday !== 'number' || isNaN(weekday)) return undefined;
+
+	return WeekDay.isValidWeekDay(weekday) ? weekday : undefined;
 }
 
 function getTimeString(value: unknown): number | undefined {
