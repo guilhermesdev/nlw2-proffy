@@ -1,4 +1,4 @@
-import type { Elysia } from 'elysia';
+import type { Context } from 'elysia';
 import type { SubjectValue } from '../entities/subjects';
 import type { WeekdayValue } from '../entities/weekdays';
 import { Subject } from '../entities/subjects';
@@ -7,8 +7,8 @@ import { Time } from '../entities/time';
 import { StudyPage } from '../views/StudyPage';
 import { ClassesRepository } from '../repositories/ClassesRepository';
 
-export function StudyPageController(app: Elysia): Elysia {
-	app.get('/study', async ({ query }) => {
+export class StudyPageController {
+	static async show({ query }: Context) {
 		try {
 			const filters = handleQueryParams(query || {});
 
@@ -29,9 +29,7 @@ export function StudyPageController(app: Elysia): Elysia {
 			console.log(error);
 			return StudyPage({ classes: [], filters: {} });
 		}
-	});
-
-	return app;
+	}
 }
 
 type QueryParams = Partial<{

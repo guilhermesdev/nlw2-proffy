@@ -1,4 +1,4 @@
-import type { Elysia } from 'elysia';
+import type { Context } from 'elysia';
 
 import { CreateClassPage } from '../views/CreateClassPage';
 import { Subject, type SubjectValue } from '../entities/subjects';
@@ -25,10 +25,8 @@ function isValidHttpUrl(string: string) {
 	}
 }
 
-export function ClassesController(app: Elysia): Elysia {
-	app.get('/give-classes', () => CreateClassPage());
-
-	app.post('/save-classes', async ({ body, set }) => {
+export class ClassesController {
+	static async createClass({ body, set }: Context) {
 		try {
 			const {
 				name,
@@ -79,9 +77,7 @@ export function ClassesController(app: Elysia): Elysia {
 			// TODO: add error message on page using HTMX
 			return CreateClassPage();
 		}
-	});
-
-	return app;
+	}
 }
 
 type BodyParams = Partial<{
@@ -149,7 +145,7 @@ function handleBodyParams({
 
 	const weekdaysPayload = body['weekday[]'];
 	const startTimesPayload = body['start_at[]'];
-	const endTimesPayload = body['start_at[]'];
+	const endTimesPayload = body['end_at[]'];
 
 	const bodyWeekdays = Array.isArray(weekdaysPayload)
 		? weekdaysPayload
