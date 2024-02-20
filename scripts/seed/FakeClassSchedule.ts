@@ -16,8 +16,8 @@ export class FakeClassSchedule {
 	}
 
 	static #getRandomTimeString(): TimeString {
-		const hours = faker.number.float({ min: 7, max: 20, precision: 1 });
-		const minutes = faker.number.float({ min: 0, max: 55, precision: 5 });
+		const hours = faker.number.float({ min: 7, max: 20, multipleOf: 1 });
+		const minutes = faker.number.float({ min: 0, max: 55, multipleOf: 5 });
 
 		const hoursString = hours.toString().padStart(2, '0');
 		const minutesString = minutes.toString().padStart(2, '0');

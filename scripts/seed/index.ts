@@ -1,3 +1,4 @@
+import { parseArgs } from 'util';
 import { db } from '../../src/database';
 import {
 	classSchedulesTable,
@@ -8,7 +9,26 @@ import { FakeClass } from './FakeClass';
 import { FakeClassSchedule } from './FakeClassSchedule';
 import { FakeProffy } from './FakeProffy';
 
-const proffies = Array.from({ length: 50 }, () => FakeProffy.generate());
+const { values: cliEntries } = parseArgs({
+	args: Bun.argv,
+	options: {
+		proffies: {
+			short: 'p',
+			type: 'string',
+			default: '20'
+		}
+	},
+	strict: false,
+	allowPositionals: true
+});
+
+const numberOfProffies = isNaN(+cliEntries.proffies!)
+	? 20
+	: +cliEntries.proffies!;
+
+const proffies = Array.from({ length: +numberOfProffies }, () =>
+	FakeProffy.generate()
+);
 
 for (const proffy of proffies) {
 	const classObject = FakeClass.generate();

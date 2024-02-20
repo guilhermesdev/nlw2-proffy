@@ -68,31 +68,6 @@ export class ClassesRepository {
 			)
 			.all();
 
-		console.log(
-			db
-				.select()
-				.from(classesTable)
-				.where(
-					and(
-						exists(
-							db
-								.select()
-								.from(classSchedulesTable)
-								.where(
-									and(
-										eq(classSchedulesTable.classId, classesTable.id),
-										eq(classSchedulesTable.weekday, weekday),
-										lte(classSchedulesTable.startAt, time),
-										gt(classSchedulesTable.endAt, time)
-									)
-								)
-						),
-						eq(classesTable.subject, subject)
-					)
-				)
-				.all()
-		);
-
 		return classes.map(({ classes: classObject, proffies: proffy }) => ({
 			id: classObject.id,
 			cost: classObject.cost,
